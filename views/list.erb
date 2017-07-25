@@ -1,0 +1,13 @@
+<h1>List of Recipes:</h1>
+<ul>
+<% @recipes.each do |recipe| %>
+  <li>
+  <h3><%= "[#{recipe[3] ? 'X' : ' '}]" %><%= recipe[0] %> (<%= recipe[2]%>min)</h3>
+  <h4><%= recipe[1] %></h4>
+  <h5><%= recipe[4]%> </h5>
+  </li>
+<%end%>
+
+</ul>
+
+<a href="/create">Add items to this list</a>
